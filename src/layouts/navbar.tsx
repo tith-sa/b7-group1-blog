@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTheme } from "../theme/themeContext";
+import ThemeToggle from "../theme/themeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
 
   // Toggle menu function
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -15,12 +18,23 @@ const Navbar = () => {
   ];
 
   // Text Logo
-  const Logo = "Blogs Post";
+  const Logo = [{ name: "Blog Posts", path: "/" }];
 
   return (
-    <header className="bg-gray-800 text-white">
+    <header
+      className={`w-full h-auto ${
+        theme === "dark"
+          ? "bg-gray-800 text-white"
+          : "bg-gray-200 text-gray-800"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        <h1 className="text-xl font-semibold">{Logo}</h1>
+        {/* Logo */}
+        <a href="/" className="text-2xl font-bold">
+          {Logo.map((item) => (
+            <span key={item.name}>{item.name}</span>
+          ))}
+        </a>
 
         {/* Hamburger button */}
         <button
@@ -63,7 +77,7 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-6 items-center">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
@@ -74,6 +88,10 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+
+            <li>
+              <ThemeToggle />
+            </li>
           </ul>
         </nav>
       </div>
