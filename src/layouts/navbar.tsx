@@ -99,10 +99,14 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div
         className={`md:hidden transition-max-height duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-40" : "max-h-0"
+          isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="flex flex-col space-y-2 p-4 bg-gray-700">
+        <ul
+          className={`flex flex-col space-y-2 p-4 ${
+            theme === "dark" ? "bg-gray-800 text-gray-200" : "bg-gray-200"
+          }`}
+        >
           {navItems.map((item) => (
             <li key={item.name}>
               <a
@@ -113,6 +117,10 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </div>
     </header>
