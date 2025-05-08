@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import cute from "../assets/sa.png";
 import NX from "../assets/image.png";
 
