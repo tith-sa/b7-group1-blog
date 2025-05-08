@@ -1,11 +1,12 @@
-import Navbar from "./layouts/navbar";
+// import Navbar from "./layouts/navbar";
 import { Routes, Route } from "react-router";
+import Footer from "./layouts/footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full h-screen ">
       {/* Header */}
-      <Navbar />
+      {/* <Navbar /> */}
       {/* main content */}
       <Routes>
         {/* Defind the routes for the application here */}
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/contact" element={<h1>Contact</h1>} />
       </Routes>
       {/* Footer */}
+      <Footer />
     </div>
   );
 };
