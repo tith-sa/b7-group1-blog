@@ -10,7 +10,7 @@ const Card = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-10">
+    <div className="">
       <div className="max-w-sm rounded-2xl overflow-hidden shadow-md bg-white">
         <img
           className="w-full h-80 object-cover"
@@ -60,9 +60,9 @@ const Card = () => {
               {/* Heart */}
               <button
                 onClick={toggleLike}
-                className={
+                className={`cursor-pointer ${
                   liked ? "text-red-500" : "text-gray-500 hover:text-red-400"
-                }
+                }`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
