@@ -1,12 +1,14 @@
 // import Navbar from "./layouts/navbar";
 import { Routes, Route } from "react-router";
 import Footer from "./layouts/footer";
+import Navbar from "./layouts/navbar";
 import Blog from "./pages/blog";
+
 const App = () => {
   return (
     <div className="w-full h-screen ">
       {/* Header */}
-      {/* <Navbar /> */}
+      <Navbar />
       {/* main content */}
       <Routes>
         {/* Defind the routes for the application here */}
