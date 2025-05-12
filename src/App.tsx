@@ -1,10 +1,13 @@
-import Navbar from "./layouts/navbar";
+// import Navbar from "./layouts/navbar";
 import { Routes, Route } from "react-router";
-import Card from "./components/card";
 import Home from "./pages/home";
+import Footer from "./layouts/footer";
+import Navbar from "./layouts/navbar";
+import Blog from "./pages/blog";
+
 const App = () => {
   return (
-    <div>
+    <div className="w-full h-screen ">
       {/* Header */}
       <Navbar />
       {/* main content */}
@@ -14,9 +17,10 @@ const App = () => {
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/services" element={<h1>Services</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />
-        <Route path="/card" element={<Card />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       {/* Footer */}
+      <Footer />
     </div>
   );
 };
