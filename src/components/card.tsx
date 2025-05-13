@@ -43,9 +43,7 @@ const Card = () => {
               </div>
             </div>
 
-            {/* Comment and Like Icons */}
             <div className="flex items-center space-x-4 text-gray-500">
-              {/* Comment */}
               <button className="hover:text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +55,6 @@ const Card = () => {
                 </svg>
               </button>
 
-              {/* Heart */}
               <button
                 onClick={toggleLike}
                 className={`cursor-pointer ${
