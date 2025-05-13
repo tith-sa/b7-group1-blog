@@ -10,6 +10,7 @@ const App = () => {
     <div className="w-full h-screen ">
       {/* Header */}
       <Navbar />
+
       {/* main content */}
       <Routes>
         {/* Defind the routes for the application here */}
