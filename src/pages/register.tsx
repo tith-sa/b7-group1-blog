@@ -1,8 +1,8 @@
 const Register = () => {
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-white mt-10">
-        <div className="w-full max-w-md p-8  rounded-md shadow-xl">
+      <div className="min-h-screen flex flex-col items-center justify-center  mt-30">
+        <div className="w-full max-w-md p-8  rounded-md shadow-xl bg-gray-80 ">
           <h2 className="text-3xl font-bold text-center mb-2">Register</h2>
           <p className="text-center text-gray-600 mb-6">
             Kindly fill in this form to register.
@@ -15,7 +15,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Enter username"
-                className="w-full px-3 py-2 shadow-xl rounded bg-gray-100"
+                className="w-full px-3 py-2 rounded bg-gray-100"
               />
             </div>
             <div>
@@ -23,7 +23,7 @@ const Register = () => {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="w-full px-3 py-2 shadow-xl  rounded bg-gray-100"
+                className="w-full px-3 py-2  rounded bg-gray-100"
               />
             </div>
             <div>
@@ -33,7 +33,7 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="Enter password"
-                className="w-full px-3 py-2 shadow-xl  rounded bg-gray-100"
+                className="w-full px-3 py-2   rounded bg-gray-100"
               />
             </div>
             <div>
@@ -43,7 +43,7 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="Repeat password"
-                className="w-full px-3 py-2 shadow-xl  rounded bg-gray-100"
+                className="w-full px-3 py-2  rounded bg-gray-100"
               />
             </div>
             <button
