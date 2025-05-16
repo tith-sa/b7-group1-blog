@@ -16,10 +16,14 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<string>("light");
+  const savedTheme = localStorage.getItem("theme") || "light";
+  const [theme, setTheme] = useState<string>(savedTheme);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    const newtheme = theme === "light" ? "dark" : "light";
+    // setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme(newtheme);
+    localStorage.setItem("theme", newtheme);
   };
 
   useEffect(() => {

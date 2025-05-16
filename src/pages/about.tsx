@@ -24,30 +24,45 @@ const about = () => {
       <div>
         <h2 className="text-3xl font-bold text-center">Purpose</h2>
         <div className="grid grid-cols-1npx create-strapi-app@latest sm:grid-cols-4 gap-5 sm:gap-10 p-10 sm:px-20">
-          <div className="">
+          <div>
             <h3 className="text-xl font-bold flex gap-2">
               <FaEdit color="blue" /> Easy to update content
             </h3>
             <p>Add posts without touching the code. </p>
           </div>
-          <div className="">
+          <div>
             <h3 className="text-xl font-bold flex gap-2">
               <MdUpdate color="blue" /> Real-time changes
             </h3>
             <p>New posts appear instantly on the site.</p>
           </div>
-          <div className="">
+          <div>
             <h3 className="text-xl font-bold flex gap-2">
               <FaSearch color="blue" /> Search and organize{" "}
             </h3>
             <p>Users can easily find posts using search or categories.</p>
           </div>
-          <div className="">
+          <div>
             <h3 className="text-xl font-bold flex gap-2">
               <FaUser color="blue" /> User interaction
             </h3>
             <p>Supports comments, likes, and sharing to engage readers.</p>
           </div>
+        </div>
+      </div>
+      <div className=" px-10 sm:px-20">
+        <h2 className="text-3xl font-bold text-center">Features</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-10">
+          <img
+            className="h-full"
+            src="https://images01.nicepagecdn.com/page/87/29/one-page-template-preview-87293.jpg"
+            alt="blog page"
+          />
+          <img
+            className="h-full"
+            src="https://upskilluniverse.com/wp-content/uploads/2024/06/lxp-upscaled-768x378.jpeg"
+            alt="blog page"
+          />
         </div>
       </div>
     </>
