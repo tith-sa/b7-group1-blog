@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full h-auto ${
+      className={`w-full h-auto fixed top-0 left-0 ${
         theme === "dark"
           ? "bg-gray-800 text-white"
           : "bg-gray-200 text-gray-800"
@@ -120,7 +120,6 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-
       <div
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"

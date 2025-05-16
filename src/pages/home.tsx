@@ -1,6 +1,7 @@
 import Cardhome from "../components/cardhome";
 import Management from "../assets/management.png";
-import Mana from "../assets/mana.png"; // Replace with actual icon/image path
+import Mana from "../assets/mana.png";
+import { useTheme } from "../theme/themeContext";
 
 const categories = [
   { label: "Business", icon: "📊" },
@@ -55,15 +56,31 @@ const services = [
   },
 ];
 const Home = () => {
+  const { theme } = useTheme();
   return (
     <>
-      ​
-      <div className="">
+      <div className={`${theme === "dark" ? "bg-gray-900" : "bg-gray-100"}`}>
         <div className="max-w-7xl mx-auto px-20 py-8">
-          <div className="bg-gray-100 rounded-xl flex flex-col md:flex-row items-center p-6 gap-6">
+          <div
+            className={`rounded-xl flex flex-col md:flex-row items-center p-6 gap-6 ${
+              theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+            }`}
+          >
             <div className="flex-1">
-              <p className="text-gray-500 text-sm">Home / Bootcamp</p>
-              <h1 className="text-3xl font-bold mt-2">Bootcamp Program</h1>
+              <p
+                className={`text-sm ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-500"
+                }`}
+              >
+                Home / Bootcamp
+              </p>
+              <h1
+                className={`text-3xl font-bold mt-2 ${
+                  theme === "dark" ? "text-gray-300" : "text-black"
+                }`}
+              >
+                Bootcamp Program
+              </h1>
             </div>
             <div className="flex-2 h-70">
               <img
@@ -81,7 +98,13 @@ const Home = () => {
                 className="flex flex-col  items-center text-center space-y-2 hover:text-blue-600 transition"
               >
                 <div className="text-xl ">{cat.icon}</div>
-                <span className="text-sm font-medium">{cat.label}</span>
+                <span
+                  className={`text-sm font-medium ${
+                    theme === "dark" ? "text-gray-300" : "text-black"
+                  }`}
+                >
+                  {cat.label}
+                </span>
               </div>
             ))}
           </div>
@@ -89,7 +112,11 @@ const Home = () => {
 
         <div className=" max-w-6xl mx-auto px-20 py-16 flex flex-col lg:flex-row items-center  gap-10">
           <div className="flex-1 ml-10">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+            <h2
+              className={`text-2xl md:text-3xl font-semibold mb-6 ${
+                theme === "dark" ? "text-gray-300" : "text-black"
+              }`}
+            >
               The Advantages of the <br />{" "}
               <span className="text-blue-600">upskill Program.</span>
             </h2>
@@ -98,7 +125,13 @@ const Home = () => {
                 <div key={index} className="flex items-start gap-3">
                   <div className="text-blue-500 text-xl">✅</div>
                   <div>
-                    <h4 className="font-semibold">{adv.title}</h4>
+                    <h4
+                      className={`font-semibold ${
+                        theme === "dark" ? "text-gray-300" : "text-black"
+                      }`}
+                    >
+                      {adv.title}
+                    </h4>
                     <p className="text-gray-500 text-sm">{adv.desc}</p>
                   </div>
                 </div>
@@ -118,7 +151,11 @@ const Home = () => {
           </div>
         </div>
         <div className=" px-30  py-10 md:px-12 lg:px-20 rounded-xl">
-          <h1 className="text-center text-2xl md:text-3xl font-semibold mb-8">
+          <h1
+            className={`text-center text-2xl md:text-3xl font-semibold mb-8 ${
+              theme === "dark" ? "text-gray-300" : "text-black"
+            }`}
+          >
             Bootcamp Program
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -144,17 +181,24 @@ const Home = () => {
             />
           </div>
         </div>
-        <section className="bg-white py-12 px-4 md:px-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <section className="py-16 px-6 md:px-24 bg-white">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {services.map((service, idx) => (
-              <div key={idx} className="flex flex-col items-center space-y-4">
+              <div
+                key={idx}
+                className="flex flex-col items-center space-y-5 transition-transform duration-300 hover:scale-105 hover:shadow-md p-4 rounded-xl"
+              >
                 <img
                   src={service.icon}
-                  alt={service.title}
-                  className="w-20 h-20"
+                  alt={`${service.title} icon`}
+                  className="w-20 h-20 object-contain"
                 />
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                <p className="text-gray-500 text-sm">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-800">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
