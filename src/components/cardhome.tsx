@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Heart, Bookmark, MessageCircle } from "lucide-react";
+import { useTheme } from "../theme/themeContext";
 
 interface CardhomeProps {
   Image: string;
@@ -10,12 +11,17 @@ interface CardhomeProps {
 const Cardhome = ({ Image, Title, Description }: CardhomeProps) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const { theme } = useTheme();
 
   const toggleLike = () => setLiked((prev) => !prev);
   const toggleSave = () => setSaved((prev) => !prev);
 
   return (
-    <div className="bg-white  rounded-xl shadow-md max-w-xs w-60 overflow-hidden hover:shadow-lg transition relative">
+    <div
+      className={` rounded-xl shadow-md max-w-xs w-60 overflow-hidden hover:shadow-lg transition relative ${
+        theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+      }`}
+    >
       <img
         src={Image}
         alt="Drawing Course"
@@ -23,11 +29,21 @@ const Cardhome = ({ Image, Title, Description }: CardhomeProps) => {
       />
       <div className="p-4 pb-12">
         <a href="">
-          <h3 className="text-sm font-bold mt-2  hover:text-blue-600">
+          <h3
+            className={`text-sm font-bold mt-2  hover:text-blue-600 ${
+              theme === "dark" ? "text-gray-300" : "text-black"
+            }`}
+          >
             {Title}
           </h3>
         </a>
-        <p className="text-gray-600 text-sm mt-1">{Description}</p>
+        <p
+          className={`text-sm mt-1 ${
+            theme === "dark" ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
+          {Description}
+        </p>
       </div>
 
       <div className="absolute bottom-3 right-4 flex items-center gap-4 text-gray-500">
