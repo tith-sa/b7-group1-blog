@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Heart, Bookmark, MessageCircle } from "lucide-react";
-
 interface CardhomeProps {
   Image: string;
   Title: string;
