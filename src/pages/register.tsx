@@ -2,7 +2,7 @@ const Register = () => {
   return (
     <>
       <div className="min-h-screen flex flex-col items-center justify-center bg-white mt-10">
-        <div className="w-full max-w-md p-8  rounded-md shadow-md">
+        <div className="w-full max-w-md p-8  rounded-md shadow-xl">
           <h2 className="text-3xl font-bold text-center mb-2">Register</h2>
           <p className="text-center text-gray-600 mb-6">
             Kindly fill in this form to register.
