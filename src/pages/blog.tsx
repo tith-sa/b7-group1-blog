@@ -2,7 +2,6 @@ import Card from "../components/card";
 
 const blog = () => {
   return (
-    // <div className="min-h-screen bg-gray-100 p-6 ">
     <div className="max-w-4xl mx-auto">
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
