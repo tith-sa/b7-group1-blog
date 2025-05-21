@@ -1,7 +1,7 @@
 const login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-400 via-white to-green-300 ">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8 h-120">
+    <div className="min-h-screen h-[60px] flex items-center justify-center  ">
+      <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8 h-120 transition-transform transform hover:scale-105">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Welcome
         </h2>

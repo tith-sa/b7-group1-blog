@@ -5,6 +5,7 @@ import Footer from "./layouts/footer";
 import Navbar from "./layouts/navbar";
 import Blog from "./pages/blog";
 import Login from "./pages/login";
+import Profile from "./pages/profile";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/contact" element={<h1>Contact</h1>} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       {/* Footer */}
       <Footer />
