@@ -4,7 +4,7 @@ import { MdUpdate } from "react-icons/md";
 const about = () => {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-30 gap-5 p-10 sm:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-30 gap-5 p-10 sm:px-20 pt-25">
         <div className="my-auto">
           <h1 className="text-4xl font-bold mb-5">About Page</h1>
           <p className="text-lg">
