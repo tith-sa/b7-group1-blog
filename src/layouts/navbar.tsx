@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTheme } from "../theme/themeContext";
 import ThemeToggle from "../theme/themeToggle";
-import { Home, User, Briefcase, Mail } from "lucide-react";
+import { Home, User, Newspaper, Mail } from "lucide-react";
 import { useLocation } from "react-router";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Home },
     { name: "About", path: "/about", icon: User },
-    { name: "Services", path: "/services", icon: Briefcase },
+    { name: "Blogs", path: "/services", icon: Newspaper },
     { name: "Contact", path: "/contact", icon: Mail },
   ];
 
