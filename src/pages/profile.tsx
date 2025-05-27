@@ -23,16 +23,21 @@ const profile = () => {
           </h1>
           {/* About */}
           <p className="w-full text-gray-700 dark:text-gray-400 text-md text-pretty sm:text-center text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
             debitis labore consectetur voluptatibus mollitia dolorem veniam
             omnis ut quibusdam minima sapiente repellendus asperiores explicabo,
             eligendi odit, dolore similique fugiat dolor, doloremque eveniet.
-            Odit, consequatur. Ratione voluptate exercitationem hic eligendi
-            vitae animi nam in, est earum culpa illum aliquam. Atque aperiam et
-            voluptatum voluptate distinctio, nostrum hic voluptatibus nisi.
-            Eligendi voluptatibus numquam maxime voluptatem labore similique qui
-            illo est magnam adipisci autem quisquam, quia incidunt excepturi,
-            possimus odit praesentium?
+            Anyone who is burdened with responsibilities, working with
+            commitment, and surrounded by complexities, will understand the
+            challenges. Despite the smallest of issues, wisdom can repel what is
+            harsh. To choose carefully, to reject what is painful yet similar to
+            what is good — this is the path. There are moments of betrayal,
+            reasons that demand effort, and exercises in selecting what matters.
+            Life, identity, and responsibility are illuminated by knowledge. In
+            the end, distinction lies in understanding, even when faced with
+            indulgence and desire. Choosing wisely among many similar things
+            brings value. Great effort and hard work lead to results, even if
+            interrupted by conflict or exception. Presence matters.
           </p>
           {/* Social Links */}
           <div className="px-2 flex rounded-sm bg-gray-200 text-gray-500 dark:bg-gray-700 dark:bg-opacity-30 dark:text-gray-700 hover:text-gray-600 hover:dark:text-gray-400">
