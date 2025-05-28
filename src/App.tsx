@@ -7,6 +7,7 @@ import Navbar from "./layouts/navbar";
 import Blog from "./pages/blog";
 import Register from "./Auth/Register";
 import Contact from "./pages/contact";
+import Login from "./Auth/login";
 const App = () => {
   return (
     <div className="w-full h-screen ">
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          {/* Add more routes as needed */}
         </Routes>
       </main>
       {/* Footer */}
