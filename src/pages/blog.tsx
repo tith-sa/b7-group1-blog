@@ -2,6 +2,7 @@ import Card from "../components/card";
 
 const blog = () => {
   return (
+    // <div className="min-h-screen bg-gray-100 p-6 ">
     <div className="max-w-4xl mx-auto">
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
@@ -24,7 +25,7 @@ const blog = () => {
           Fashion
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-3  gap-4 mb-4">
         <Card
           title=" To Improve Your Health"
           descraption="The yoga mat curled up in the backseat of your car. The gym membership you keep paying for but don’t actually use. "
