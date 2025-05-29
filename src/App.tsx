@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Blog from "./pages/blog";
-import Login from "./pages/login";
 import Profile from "./pages/profile";
 
 import Footer from "./layouts/footer";

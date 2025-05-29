@@ -8,6 +8,7 @@ const BlogDetail = () => {
     title: string;
     content: string;
     image?: { format: { thumbnail: { url: string } } }[];
+    url: string;
   }
 
   const [blog, setBlog] = useState<Blog | null>(null);
@@ -22,7 +23,7 @@ const BlogDetail = () => {
         const response = await axios.get(
           `http://localhost:1337/api/blogs/${id}?populate=*`
         );
-        setBlog(response.data.data);
+        setBlog((response.data as { data: Blog }).data);
       } catch (error) {
         console.error("Failed to fetch blog:", error);
       }
@@ -32,13 +33,13 @@ const BlogDetail = () => {
   console.log("blog", blog);
 
   return (
-    <div className="w-[50%] mx-auto bg-white shadow-2xl px-12 mt-12 rounded-2xl">
+    <div className="w-full min-h-screen mx-auto bg-white shadow-2xl px-12 mt-12 rounded-2xl">
       <div>
         <h1 className="text-2xl text-pink-00">{blog?.title}</h1>
         <p>{blog?.content}</p>
       </div>
       <div className="w-full ">
-        <img src={blog?.image?.url} alt="" />
+        <img src={blog?.image?.[0]?.format?.thumbnail?.url} alt="" />
       </div>
     </div>
   );

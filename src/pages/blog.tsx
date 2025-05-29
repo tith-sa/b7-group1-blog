@@ -1,5 +1,5 @@
-// No imports are needed here
 import Card from "../components/card";
+
 const Blog = () => {
   return (
     <div className="max-w-4xl mx-auto">
