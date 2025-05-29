@@ -1,9 +1,11 @@
+import { Link } from "react-router";
+
 const login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-400 via-white to-green-300 ">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8 h-120">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Welcome
+          Welcome back!
         </h2>
 
         <form className="space-y-4">
@@ -46,8 +48,12 @@ const login = () => {
         </form>
 
         <div className="flex justify-between items-center mt-4 text-sm text-gray-600">
-          <button className="hover:underline">Forgot password?</button>
-          <button className="hover:underline">Create account</button>
+          <Link to="#" className="hover:underline">
+            Forgot password?
+          </Link>
+          <Link to="/register" className="hover:underline">
+            Create account
+          </Link>
         </div>
       </div>
     </div>

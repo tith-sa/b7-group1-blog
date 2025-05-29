@@ -287,9 +287,8 @@ const CoursesSection = ({ styles }: { styles: StylesProps }) => (
 );
 
 // Services Section Component
-
 const ServicesSection = ({ styles }: { styles: StylesProps }) => (
-  <section className={`py-16 ${styles.cardBackground}`}>
+  <section className={`py-16 ${styles.background}`}>
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-12">
         <h2
