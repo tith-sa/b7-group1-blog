@@ -7,6 +7,7 @@ import Navbar from "./layouts/navbar";
 import Blog from "./pages/blog";
 import Register from "./Auth/Register";
 import Contact from "./pages/contact";
+import BlogDetail from "./pages/blogDetail";
 const App = () => {
   return (
     <div className="w-full h-screen ">
@@ -18,8 +19,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/about" element={<h1>About</h1>} />
-          <Route path="/services" element={<h1>Services</h1>} />
+          <Route path="/detail/:id" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/register" element={<Register />} />
