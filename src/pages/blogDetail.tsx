@@ -37,7 +37,7 @@ const BlogDetail = () => {
         <img src={blog?.image?.url} alt="" />
       </div>
       <div>
-        <h1 className="text-2xl text-pink-400">{blog?.title}</h1>
+        <h1 className="text-2xl text-pink-00">{blog?.title}</h1>
         <p>{blog?.content}</p>
       </div>
     </div>

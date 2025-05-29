@@ -11,6 +11,7 @@ import Contact from "./pages/contact";
 import Register from "./Auth/Register";
 import Login from "./Auth/login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import BlogDetail from "./pages/blogDetail";
 const App = () => {
   const isAuthenticated = false;
   return (
@@ -28,6 +29,9 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
           </Route>
           {/* Private Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/detail/:id" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

@@ -1,7 +1,8 @@
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
+import React from "react";
 
 interface ProtectedRouteProps {
-  element: JSX.Element;
+  element: React.ReactElement;
   isAuthenticated: boolean;
 }
 
