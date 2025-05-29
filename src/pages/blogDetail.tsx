@@ -33,12 +33,12 @@ const BlogDetail = () => {
 
   return (
     <div className="w-[50%] mx-auto bg-white shadow-2xl px-12 mt-12 rounded-2xl">
-      <div className="w-full ">
-        <img src={blog?.image?.url} alt="" />
-      </div>
       <div>
         <h1 className="text-2xl text-pink-00">{blog?.title}</h1>
         <p>{blog?.content}</p>
+      </div>
+      <div className="w-full ">
+        <img src={blog?.image?.url} alt="" />
       </div>
     </div>
   );
