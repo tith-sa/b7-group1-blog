@@ -1,49 +1,79 @@
+import { useTheme } from "../theme/themeContext";
+
 const footer = () => {
+  const { theme } = useTheme();
+
+  const footerNavLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const socialMedia = [
+    { name: "Facebook", path: "#" },
+    { name: "Twitter", path: "#" },
+    { name: "LinkedIn", path: "#" },
+  ];
+
   return (
     <>
-      <footer className="bg-gray-900 text-white py-10 mt-5">
+      <footer
+        className={`py-10 ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`}
+      >
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-2xl font-semibold mb-2">Blog Post</h2>
+            <h2
+              className={`text-xl font-semibold mb-3 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Blog Post
+            </h2>
             <p className="text-sm text-gray-400">
               Delivering quality and excellence across every project.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-3 ">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <a href="#" className="hover:text-white">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a href="#" className="hover:text-white">
-                  Contact
-                </a>
-              </li>
+            <h3
+              className={`text-xl font-semibold mb-3 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Quick Links
+            </h3>
+            <ul className="flex items-center gap-6">
+              {footerNavLinks.map((link, index1) => (
+                <li key={index1}>
+                  <a
+                    href={link.path}
+                    className={`text-base ${
+                      theme === "dark"
+                        ? "text-gray-400 hover:text-white"
+                        : "text-gray-700 hover:text-gray-900"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+            <h3
+              className={`text-xl font-semibold mb-3 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Follow Us
+            </h3>
             <div className="flex space-x-4 text-gray-400">
-              <a href="#" className="hover:text-white">
-                Facebook
-              </a>
-              <a href="#" className="hover:text-white">
-                Twitter
-              </a>
-              <a href="#" className="hover:text-white">
-                LinkedIn
-              </a>
+              {socialMedia.map((item, index2) => (
+                <a key={index2} href={item.path}>
+                  {item.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>

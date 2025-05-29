@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTheme } from "../theme/themeContext";
 import ThemeToggle from "../theme/themeToggle";
-import { Home, User, Briefcase, Mail } from "lucide-react";
+import { Home, User, Newspaper, Mail } from "lucide-react";
 import { useLocation } from "react-router";
 
 const Navbar = () => {
@@ -14,13 +14,13 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Home },
     { name: "About", path: "/about", icon: User },
-    { name: "Services", path: "/services", icon: Briefcase },
+    { name: "Blogs", path: "/blog", icon: Newspaper },
     { name: "Contact", path: "/contact", icon: Mail },
   ];
 
   return (
     <header
-      className={`w-full h-auto ${
+      className={`w-full h-auto fixed z-10 top-0 left-0 ${
         theme === "dark"
           ? "bg-gray-800 text-white"
           : "bg-gray-200 text-gray-800"
@@ -120,7 +120,6 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-
       <div
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
