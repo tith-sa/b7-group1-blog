@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const login = () => {
+const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-400 via-white to-green-300 ">
       <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8 h-120">
@@ -59,4 +59,4 @@ const login = () => {
     </div>
   );
 };
-export default login;
+export default Login;
