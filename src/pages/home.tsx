@@ -359,3 +359,28 @@ const Home = () => {
 };
 
 export default Home;
+
+// const [products, setProducts] = useState<
+//     { id: number; image: string; title: string; price: number }[]
+//   >([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+//   const fetchProducts = async () => {
+//     try {
+//       const response = await axios.get("https://fakestoreapi.com/products");
+//       setProducts(response.data);
+//       setLoading(false);
+//     } catch (err) {
+//       setError(err.message);
+//     } finally {
+//     }
+//   };
+//   useEffect(() => {
+//     fetchProducts();
+//   }, []);
+//   if (loading) {
+//     return <h2>Loading products...</h2>;
+//   }
+//   if (error) {
+//     return <h2>Error: {error}</h2>;
+//   }

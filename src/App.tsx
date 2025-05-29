@@ -31,7 +31,6 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-
           {/* Protected Routes */}
           <Route
             path="/dashboard"
