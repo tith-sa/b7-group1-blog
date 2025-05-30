@@ -7,7 +7,7 @@ const blog = () => {
       <Search />
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
-          className="w-230 h-80  mx-auto mb-4 rounded-xl"
+          className="w-230 h-80 mx-auto mb-4 rounded-xl"
           src="https://trailchronicles.com/wp-content/uploads/2025/01/b2cireland-travelinsurance.jpeg"
           alt=""
         />
@@ -26,7 +26,7 @@ const blog = () => {
           Fashion
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3  gap-4 ">
         <Card
           title=" To Improve Your Health"
           descraption="The yoga mat curled up in the backseat of your car. The gym membership you keep paying for but don’t actually use. "
