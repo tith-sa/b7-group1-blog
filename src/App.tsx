@@ -1,67 +1,51 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // Ensure it's from "react-router-dom", not "react-router"
 // public
 import Home from "./pages/home";
-// layouts
+import About from "./pages/about";
+import Blog from "./pages/blog";
+
+import BlogDetail from "./pages/blogDetail";
 import Footer from "./layouts/footer";
 import Navbar from "./layouts/navbar";
 // private
-import About from "./pages/about";
-import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 import Register from "./Auth/Register";
 import Login from "./Auth/login";
 import ProtectedRoute from "./components/ProtectedRoute";
-import BlogDetail from "./pages/blogDetail";
-import Profile from "./pages/profile"; // Import Profile component
-import Search from "./components/search"; // Corrected path to match the actual file name
-const App = () => {
-  const isAuthenticated = true; // Set to true for testing
 
-  const blogs = [
-    { id: 1, title: "React Basics" },
-    { id: 2, title: "Advanced JavaScript" },
-    { id: 3, title: "CSS Tricks" },
-  ];
+const App = () => {
+  const isAuthenticated = false;
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen flex flex-col">
       {/* Header */}
       <Navbar />
 
-      {/* main content */}
-      <Routes>
-        {/* Defind the routes for the application here */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/services" element={<h1>Services</h1>} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-      <main className="mt-12">
+      {/* Main content */}
+      <main className="flex-grow pt-20">
         <Routes>
           {/* Public Routes */}
-          <Route>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-          </Route>
-          {/* Private Routes */}
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/detail/:id" element={<BlogDetail />} />
-          <Route path="/contact" element={<Contact />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          {/* Protected Routes */}
 
+          {/* Protected Routes */}
+          {/* <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute
+                isAuthenticated={isAuthenticated}
+                element={<h1>Dashboard</h1>}
+              />
+            }
+          /> */}
           <Route
             path="/about"
             element={
               <ProtectedRoute
-                element={<About />}
                 isAuthenticated={isAuthenticated}
+                element={<About />}
               />
             }
           />
@@ -69,8 +53,17 @@ const App = () => {
             path="/blog"
             element={
               <ProtectedRoute
-                element={<Blog />}
                 isAuthenticated={isAuthenticated}
+                element={<Blog />}
+              />
+            }
+          />
+          <Route
+            path="/detail/:id"
+            element={
+              <ProtectedRoute
+                isAuthenticated={isAuthenticated}
+                element={<BlogDetail />}
               />
             }
           />
@@ -78,26 +71,8 @@ const App = () => {
             path="/contact"
             element={
               <ProtectedRoute
+                isAuthenticated={isAuthenticated}
                 element={<Contact />}
-                isAuthenticated={isAuthenticated}
-              />
-            }
-          />
-          <Route
-            path="/search"
-            element={
-              <ProtectedRoute
-                element={<Search />}
-                isAuthenticated={isAuthenticated}
-              />
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute
-                element={<h1>Dashboard</h1>}
-                isAuthenticated={isAuthenticated}
               />
             }
           />
@@ -105,13 +80,14 @@ const App = () => {
             path="/profile"
             element={
               <ProtectedRoute
-                element={<h1>Profile</h1>}
                 isAuthenticated={isAuthenticated}
+                element={<h1>Profile</h1>}
               />
             }
           />
         </Routes>
       </main>
+
       {/* Footer */}
       <Footer />
     </div>
