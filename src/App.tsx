@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"; // Ensure it's from "react-router-dom", not "react-router"
+import { Routes, Route } from "react-router";
 // public
 import Home from "./pages/home";
 import About from "./pages/about";

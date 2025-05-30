@@ -1,8 +1,10 @@
 import Card from "../components/card";
-
-const Blog = () => {
+import Search from "../components/search";
+const blog = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    // <div className="min-h-screen bg-gray-100 p-6 ">
+    <div className="max-w-4xl mx-auto py-6 px-4 ">
+      <Search />
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
           className="w-230 h-80 mx-auto mb-4 rounded-xl"
@@ -62,4 +64,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default blog;
