@@ -6,7 +6,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = ({ element, isAuthenticated }: ProtectedRouteProps) => {
-  return isAuthenticated ? element : <Navigate to="/login" />;
+  return isAuthenticated ? <>{element}</> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoute;
