@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full h-auto fixed z-10 top-0 left-0 ${
+      className={`w-full h-16 md:h-20 fixed top-0 left-0 z-20 ${
         theme === "dark"
           ? "bg-gray-800 text-white"
           : "bg-gray-200 text-gray-800"
