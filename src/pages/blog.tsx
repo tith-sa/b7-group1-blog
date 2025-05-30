@@ -1,11 +1,11 @@
 import Card from "../components/card";
 
-const blog = () => {
+const Blog = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
-          className="w-230 h-80  mx-auto mb-4 rounded-xl"
+          className="w-230 h-80 mx-auto mb-4 rounded-xl"
           src="https://trailchronicles.com/wp-content/uploads/2025/01/b2cireland-travelinsurance.jpeg"
           alt=""
         />
@@ -62,4 +62,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;
