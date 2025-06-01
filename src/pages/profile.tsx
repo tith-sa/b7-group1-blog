@@ -28,7 +28,7 @@ const Profile = () => {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
-        setUser(response.data);
+        setUser(response.data as User);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }

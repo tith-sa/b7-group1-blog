@@ -22,7 +22,7 @@ const App = () => {
       <Navbar />
 
       {/* Main content */}
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-16">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
