@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router"; // For navigation
 import BlogsCard from "../components/BlogsCard";
 import { useTheme } from "../theme/themeContext";
 import axios from "axios";
