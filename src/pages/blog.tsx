@@ -23,7 +23,7 @@ const Blog = () => {
 
   // Get theme context and navigation hook
   const { theme } = useTheme() as { theme: "dark" | "light" | undefined };
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const navigate = useNavigate();
 
   // Get base URL from environment variables
   const baseUrl = import.meta.env.VITE_API_KEY;
@@ -65,7 +65,7 @@ const Blog = () => {
       return `${baseUrl}${imageData.url}`;
     }
     // Fallback image if no image is provided
-    return `https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop`;
+    return `https://e0.pxfuel.com/wallpapers/351/757/desktop-wallpaper-blue-screen-of-death-blue-screen-of-death-windows-error-thumbnail.jpg`;
   };
 
   // Helper function to safely get blog title
@@ -85,7 +85,7 @@ const Blog = () => {
       blogDocumentId
     );
     // Navigate to blog detail page with the documentId
-    navigate(`/blog/${blogDocumentId}`);
+    navigate(`/detail/${blogDocumentId}`);
   };
 
   // Function to handle search input changes
