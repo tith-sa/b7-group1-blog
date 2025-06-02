@@ -112,7 +112,7 @@ const Navbar = () => {
               );
             })}
 
-            <li className="border-l pl-4 border-gray-600">
+            <li className="border-x px-4 border-gray-600">
               <ThemeToggle />
             </li>
             <div className="flex items-center space-x-2">
@@ -174,7 +174,7 @@ const Navbar = () => {
               );
             })}
 
-            <li className="pt-2 border-t border-gray-600">
+            <li className="py-2 border-y border-gray-600">
               <ThemeToggle />
             </li>
             <div className="space-y-2">
