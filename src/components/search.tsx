@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 const Search = () => {
   return (
     <div className="w-full px-4 py-10 flex justify-center">
