@@ -1,11 +1,33 @@
+import { useEffect, useState } from "react";
 import Card from "../components/card";
+import axios from "axios";
 
-const blog = () => {
+interface BlogListProps {
+  authorId: number;
+}
+
+const Blog: React.FC<BlogListProps> = ({ authorId }) => {
+  const [blogData, setBlogData] = useState([]);
+
+  useEffect(() => {
+    const fecthAuthors = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:1337/api/blogs?author=${authorId}`
+        );
+        setBlogData(response.data.data);
+      } catch (error) {
+        console.error("Failed to fetch blog data:", error);
+      }
+    };
+    fecthAuthors();
+  }, [authorId]);
+
   return (
     <div className="max-w-4xl mx-auto">
       <section className=" from-blue-600 to-indigo-700 text-white  rounded-xl mt-3 shadow-lg ">
         <img
-          className="w-230 h-80  mx-auto mb-4 rounded-xl"
+          className="w-230 h-80 mx-auto mb-4 rounded-xl"
           src="https://trailchronicles.com/wp-content/uploads/2025/01/b2cireland-travelinsurance.jpeg"
           alt=""
         />
@@ -29,37 +51,55 @@ const blog = () => {
           title=" To Improve Your Health"
           descraption="The yoga mat curled up in the backseat of your car. The gym membership you keep paying for but don’t actually use. "
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
         <Card
           title="Major Spring Summer 2025"
           descraption="Things to love about spring: blue skies, temperatures above 12 degrees, 
           and a whole load of new szn fashion trends."
           image="https://hips.hearstapps.com/hmg-prod/images/spring-summer-fashion-trends-2025-67894bc4b1803.png?crop=0.6697674418604651xw:1xh;center,top&resize=1200:*"
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
         <Card
           title="Restaurant Point Of View "
           descraption="The restaurant point of view is a perspective that focuses on the experiences and opinions of the restaurant itself."
           image="https://media.istockphoto.com/id/1282729736/photo/woman-in-a-restaurant-with-her-male-friend-having-lunch.jpg?s=612x612&w=0&k=20&c=93dv7iF-oDon4KKDjkjfFViLVhFM5Q2ZmcNOaNTmLu0="
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
         <Card
           title="Traverling in 2025"
           descraption="All products are independently selected by our editors. If you buy something
          ."
           image="https://media.cntraveller.com/photos/670e2b6fa6ba0ee97419bbe3/16:9/w_2560%2Cc_limit/travelGettyImages-1599827836.jpg"
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
         <Card
           title="Fashion Week"
           descraption="Fashion Week is a fashion industry event, lasting approximately one week,"
           image="https://www.voguecollege.com/wp-content/uploads/2024/09/LOOK_03_0322_V2_330-1920-x1280.jpg"
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
         <Card
           title="life in 2025"
           descraption="The future is a time period that is yet to come, and it is often associated with"
           image="https://pkphoto.com/wp-content/uploads/2021/12/ZP8A0053.lg_-3-3-1650x1100-1.jpg"
+          author="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6YLIQWyckFt3XHHL2BmYIc7dglDsMqQ5t4g&s"
+          username="John Doe"
+          date="2025-01-01"
         />
       </div>
     </div>
   );
 };
 
-export default blog;
+export default Blog;

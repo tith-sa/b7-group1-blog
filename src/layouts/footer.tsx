@@ -18,9 +18,7 @@ const footer = () => {
   return (
     <>
       <footer
-        className={`py-10 mt-4 ${
-          theme === "dark" ? "bg-gray-800" : "bg-gray-200"
-        }`}
+        className={`py-10 ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`}
       >
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

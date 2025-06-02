@@ -1,13 +1,22 @@
 import { useState } from "react";
-import cute from "../assets/sa.png";
 
 interface CardProps {
   title: string;
   descraption: string;
   image: string;
+  author: string;
+  username: string;
+  date: string;
 }
 
-const Card = ({ title, descraption, image }: CardProps) => {
+const Card = ({
+  title,
+  descraption,
+  image,
+  author,
+  username,
+  date,
+}: CardProps) => {
   const [liked, setLiked] = useState(false);
 
   const toggleLike = () => {
@@ -34,10 +43,10 @@ const Card = ({ title, descraption, image }: CardProps) => {
         <p className="text-gray-600 text-sm line-clamp-3">{descraption}</p>
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center space-x-2">
-            <img className="w-8 h-8 rounded-full" src={cute} alt="Tith Sa" />
+            <img className="w-8 h-8 rounded-full" src={author} alt="author" />
             <div>
-              <p className="text-sm font-medium text-gray-700">Tith Sa</p>
-              <p className="text-xs text-gray-500">May 8 2025</p>
+              <p className="text-sm font-medium text-gray-700">{username}</p>
+              <p className="text-xs text-gray-500">{date}</p>
             </div>
           </div>
 
