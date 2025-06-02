@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"; // Ensure it's from "react-router-dom", not "react-router"
+import { Routes, Route } from "react-router";
 // public
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -21,57 +21,24 @@ const App = () => {
       <Navbar />
 
       {/* Main content */}
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-16">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
-
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/detail/:id" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 
           {/* Protected Routes */}
-          {/* <Route
+          <Route
             path="/dashboard"
             element={
               <ProtectedRoute
                 isAuthenticated={isAuthenticated}
                 element={<h1>Dashboard</h1>}
-              />
-            }
-          /> */}
-          <Route
-            path="/about"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                element={<About />}
-              />
-            }
-          />
-          <Route
-            path="/blog"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                element={<Blog />}
-              />
-            }
-          />
-          <Route
-            path="/detail/:id"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                element={<BlogDetail />}
-              />
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <ProtectedRoute
-                isAuthenticated={isAuthenticated}
-                element={<Contact />}
               />
             }
           />

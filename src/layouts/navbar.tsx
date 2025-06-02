@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full h-auto fixed z-10 top-0 left-0 ${
+      className={`w-full h-16 md:h-20 fixed top-0 left-0 z-20 ${
         theme === "dark"
           ? "bg-gray-800 text-white"
           : "bg-gray-200 text-gray-800"
@@ -112,7 +112,7 @@ const Navbar = () => {
               );
             })}
 
-            <li className="border-l pl-4 border-gray-600">
+            <li className="border-x px-4 border-gray-600">
               <ThemeToggle />
             </li>
             <div className="flex items-center space-x-2">
@@ -174,7 +174,7 @@ const Navbar = () => {
               );
             })}
 
-            <li className="pt-2 border-t border-gray-600">
+            <li className="py-2 border-y border-gray-600">
               <ThemeToggle />
             </li>
             <div className="space-y-2">
